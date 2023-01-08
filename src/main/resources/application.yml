@@ -1,15 +1,10 @@
-server:
-  port: 8081
-  servlet:
-    context-path: /experian
-
 spring:
-  data:
-   mongodb:
-     uri: mongodb://localhost:27017/experian
-     database: experian
   application:
-    name: discovery-client
+    name: credit-score-app
+  config:
+    activate:
+      on-profile:
+    import: configserver:http://localhost:8888
 
 eureka:
   instance:

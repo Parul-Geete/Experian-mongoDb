@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CreditCheckImpl implements CreditCheckService {
     private final Logger LOG = LoggerFactory.getLogger(CreditCheckImpl.class);

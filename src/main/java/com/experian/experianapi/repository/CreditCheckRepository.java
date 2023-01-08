@@ -5,9 +5,11 @@ import com.experian.experianapi.entity.CustomerDetailsEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface CreditCheckRepository extends MongoRepository<CustomerDetailsEntity, String> {
+import java.util.List;
 
-    CustomerDetailsEntity getCustomerDetailsEntitiesByCardNumber(String cardNo);
+@Repository
+public interface CreditCheckRepository extends MongoRepository<CustomerDetails, String> {
+
+   CustomerDetailsEntity getCustomerDetailsEntitiesByCardNumber(String cardNo);
 
 }
