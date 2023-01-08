@@ -18,7 +18,7 @@ public class CreditCheckController {
     @Autowired
     private CreditCheckService creditCheckService;
 
-    @GetMapping("/customerDetails")
+    @PostMapping("/customerDetails")
     public CustomerDetails getCustomerDetails(@RequestBody CustomerDetails customerDetails) {
         LOG.info("customerDetails updated");
         return creditCheckService.getCustomerDetails(customerDetails);
